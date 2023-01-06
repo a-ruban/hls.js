@@ -453,10 +453,10 @@ export default class BaseStreamController
         }
 
         const details = levels[frag.level].details as LevelDetails;
-        console.assert(
-          details,
-          'Level details are defined when init segment is loaded'
-        );
+        // console.assert(
+        //   details,
+        //   'Level details are defined when init segment is loaded'
+        // );
 
         const stats = frag.stats;
         this.state = State.IDLE;
@@ -1337,13 +1337,13 @@ export default class BaseStreamController
       return;
     }
     const fragCurrent = this.fragCurrent;
-    console.assert(
-      fragCurrent &&
-        frag.sn === fragCurrent.sn &&
-        frag.level === fragCurrent.level &&
-        frag.urlId === fragCurrent.urlId,
-      'Frag load error must match current frag to retry'
-    );
+    // console.assert(
+    //   fragCurrent &&
+    //     frag.sn === fragCurrent.sn &&
+    //     frag.level === fragCurrent.level &&
+    //     frag.urlId === fragCurrent.urlId,
+    //   'Frag load error must match current frag to retry'
+    // );
     // keep retrying until the limit will be reached
     if (this.fragLoadError + 1 <= config.fragLoadingMaxRetry) {
       if (!this.loadedmetadata) {
@@ -1433,7 +1433,7 @@ export default class BaseStreamController
     partial: boolean
   ) {
     const details = level.details as LevelDetails;
-    console.assert(!!details, 'level.details must be defined');
+    // console.assert(!!details, 'level.details must be defined');
     const parsed = Object.keys(frag.elementaryStreams).reduce(
       (result, type) => {
         const info = frag.elementaryStreams[type];

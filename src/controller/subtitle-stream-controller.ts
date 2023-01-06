@@ -403,10 +403,10 @@ export class SubtitleStreamController
         return;
       }
 
-      console.assert(
-        trackDetails,
-        'Subtitle track details are defined on idle subtitle stream controller tick'
-      );
+      // console.assert(
+      //   trackDetails,
+      //   'Subtitle track details are defined on idle subtitle stream controller tick'
+      // );
       const fragments = trackDetails.fragments;
       const fragLen = fragments.length;
       const end = trackDetails.edge;

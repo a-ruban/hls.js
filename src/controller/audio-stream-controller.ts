@@ -502,12 +502,12 @@ class AudioStreamController
     }
 
     const track = levels[trackId] as Level;
-    console.assert(track, 'Audio track is defined on fragment load progress');
+    // console.assert(track, 'Audio track is defined on fragment load progress');
     const details = track.details as LevelDetails;
-    console.assert(
-      details,
-      'Audio track details are defined on fragment load progress'
-    );
+    // console.assert(
+    //   details,
+    //   'Audio track details are defined on fragment load progress'
+    // );
     const audioCodec =
       config.defaultAudioCodec || track.audioCodec || 'mp4a.40.2';
 

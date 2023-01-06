@@ -205,10 +205,10 @@ class AudioTrackController extends BasePlaylistController {
 
   private selectInitialTrack(): void {
     const audioTracks = this.tracksInGroup;
-    console.assert(
-      audioTracks.length,
-      'Initial audio track should be selected when tracks are known'
-    );
+    // console.assert(
+    //   audioTracks.length,
+    //   'Initial audio track should be selected when tracks are known'
+    // );
     const currentAudioTrackName = this.trackName;
     const trackId =
       this.findTrackId(currentAudioTrackName) || this.findTrackId();
